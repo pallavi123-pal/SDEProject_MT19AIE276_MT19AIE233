@@ -24,6 +24,26 @@ To run SQLFlow on a desktop computer running Windows, Linux, or macOS, follow be
   
   Step9:  select Classify Iris Dataset Using DNNClassifer notebook and execute.
   
-  Step10: Install MySQL db and import heart.csv into MySQL table
+  Step10: Install MySQL db and import heart.csv into MySQL table using below 2 queries:
+          
+          CREATE TABLE heart 
+          (
+            age INT,
+            sex INT,
+            cp INT,
+            trestbps INT,
+            chol INT,
+            fbs INT,
+            restecg INT,
+            thalach INT,
+            exang INT,
+            oldpeak DECIMAL(2 , 1),
+            slope INT,
+            ca INT,
+            thal INT,
+            target INT
+          );  
+
+          LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/heart.csv' INTO TABLE heart FIELDS TERMINATED BY ',' IGNORE 1 ROWS;
   
   Step11: import the Bagging_Boosting.ipnyp in jupyter notebook. Connect to db and Run the cells in sequence
